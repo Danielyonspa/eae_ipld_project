@@ -20,11 +20,11 @@ with st.sidebar:
 
 
 # ----- Top title -----
-st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is ????</h1></div>""", unsafe_allow_html=True)  # TODO: Add your name
+st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is Daniel Lyons</h1></div>""", unsafe_allow_html=True)  # TODO: Add your name
 
 
 # ----- Profile image file -----
-profile_image_file_path = "profile_image.png"       # TODO: Upload your profile image to the same folder as this script and update this if it has a different name
+profile_image_file_path = "profile_image.jpeg"       # TODO: Upload your profile image to the same folder as this script and update this if it has a different name
 
 with open(profile_image_file_path, "rb") as img_file:
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
@@ -39,7 +39,7 @@ st.write(f"""
 
 
 # ----- Personal title or short description -----
-current_role = "Current Role and/or Studies or Description"   # TODO: Change this
+current_role = "Master in Big Data and Data Analytic"   # TODO: Change this
 
 st.write(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""", unsafe_allow_html=True)
 
@@ -51,7 +51,7 @@ st.subheader("About Me")
 
 # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
 st.write("""
-- 🧑‍💻 I am a <Current Role and/or Studies> 
+- 🧑‍💻 I am a student in Big Data 
 
 - 🛩️ prev: <Previous Experience, Background or Studies>
 
@@ -64,6 +64,7 @@ st.write("""
 - 📫 How to reach me: <Your Email>
 
 - 🏠 Barcelona
+        
 """)
 
 # Feel free to add other points like your Linkedin, Github, Social Media, etc.
