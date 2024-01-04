@@ -51,7 +51,7 @@ max_year = movies_df ['release_year'].max( )
 
 
 # TODO: Ex 2.3: How many director names are missing values (NaN)?
-num_missing_directors = movies_df.groupby("Missing Directos Names")["director"].count("Nan")
+num_missing_directors = movies_df.groupby("Missing Directos Names")["director"].count()
 
 # TODO: Ex 2.4: How many different countries are there in the data?
 n_countries = None
