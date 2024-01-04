@@ -53,15 +53,15 @@ st.subheader("About Me")
 st.write("""
 - 🧑‍💻 I am a student in Big Data 
 
-- 🛩️ prev: <Previous Experience, Background or Studies>
+- 🛩️ prev: I have work in Finance for 6 years
 
-- ❤️ <Your Passion and/or Interests>
+- ❤️ Passion about music and love sports
 
-- 🤖 <Your Personal Projects>
+- 🤖 My projects are try to cook new things
 
-- 🏂 <Your Hobbies>
+- 🏂 My obies are listening to music
 
-- 📫 How to reach me: <Your Email>
+- 📫 How to reach me: lyons42@gmail.com
 
 - 🏠 Barcelona
         
