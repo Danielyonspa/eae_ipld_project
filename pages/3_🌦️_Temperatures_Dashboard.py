@@ -150,20 +150,21 @@ if unique_countries_list is not None and len(selected_cities) > 0:
 
     fig = plt.figure(figsize=(10, 5))
 
-    #for city in selected_cities :
+
+for city in selected_cities :
         city_df = temps_df.query('City ==@city')  # TODO: get a dataframe with the rows of the selected city
         city_df_period = city_df.query(
                 'Date>@start_date & Date<@end_date')  # TODO: get a dataframe with the rows of the selected city and the selected period of time using the Date column and any of the <, >, <=, >= operators to compare with start_date and end_date
         plt.hist(city_df['AvgTemperatureCelsius'] , bins = 20 , edgecolor = 'white' , alpha = 0.6 ,
-                label = f'AVG °C in {city}')  # TODO: plot each city histogram in the same plot and use the label parameter to set the legend name for each city
+                label = f'AVG °C in {city}')
 
-    plt.title(f' Histogram  {city} ({start_date} to {end_date})')  # TODO
-    plt.xlabel('Temperature (°C)')  # TODO
-    plt.ylabel('Frequency')  # TODO
-    plt.legend()
-    plt.show()
+    plt.title(f' Histogram  {city} ({start_date} to {end_date})')
+plt.xlabel('Temperature (°C)')  # TODO
+plt.ylabel('Frequency')  # TODO
+plt.legend()
+plt.show()
 
-    c.pyplot(fig)
+c.pyplot(fig)
 
 
 
