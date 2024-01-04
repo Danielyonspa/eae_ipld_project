@@ -130,15 +130,16 @@ if unique_countries_list is not None and len(selected_cities) > 0:
 
     fig = plt.figure(figsize=(10, 5))
 
-    # for city in selected_cities:
-    #     city_df = None            # TODO
-    #     city_df_period = None     # TODO
-    #     plt.plot()                # TODO 
-    # plt.title()   # TODO
-    # plt.xlabel()  # TODO
-    # plt.ylabel()  # TODO
-
+    for city in selected_cities :
+        city_df = temps_df.query('City ==@city')  # TODO
+        city_df_period = city_df.query('Date>@start_date & Date<@end_date')  # TODO
+        plt.plot(city_df['Date'] , city_df['AvgTemperatureCelsius'] , label = f'Temp °C in {city}')  # TODO
+    plt.title(f'Temperature {city} ({start_date} to {end_date})')  # TODO
+    plt.xlabel('Time')  # TODO
+    plt.ylabel(' AVG Temperature (°C)')  # TODO
     plt.legend()
+    plt.show()
+
     
     c.pyplot(fig)
 
