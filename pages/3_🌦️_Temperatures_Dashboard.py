@@ -134,7 +134,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
         city_df = temps_df.query('City ==@city')  # TODO
         city_df_period = city_df.query('Date>@start_date & Date<@end_date')  # TODO
         plt.plot(city_df['Date'] , city_df['AvgTemperatureCelsius'] , label = f'Temp °C in {city}')  # TODO
-    plt.title(f'Temperature {city} ({start_date} to {end_date})')  # TODO
+    plt.title(f'Temperature {city} ({start_date} to {end_date})')
     plt.xlabel('Time')  # TODO
     plt.ylabel(' AVG Temperature (°C)')  # TODO
     plt.legend()
