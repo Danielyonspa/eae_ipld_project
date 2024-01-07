@@ -134,7 +134,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
         city_df = temps_df.query('City ==@city')  # TODO
         city_df_period = city_df.query('Date>@start_date & Date<@end_date')  # TODO
         plt.plot(city_df['Date'] , city_df['AvgTemperatureCelsius'] , label = f'Temp °C in {city}')  # TODO
-    plt.title(f'Temperature {city} ({start_date} to {end_date})')
+    plt.title(f'Temperature ({start_date} to {end_date})')
     plt.xlabel('Date')  # TODO
     plt.ylabel(' AVG Temperature (°C)')  # TODO
     plt.legend()
@@ -158,7 +158,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
         plt.hist(city_df['AvgTemperatureCelsius'] , bins = 20 , edgecolor = 'white' , alpha = 0.6 ,
                 label = f'AVG °C in {city}')
 
-    plt.title(f' Histogram  {city} ({start_date} to {end_date})')
+    plt.title(f' Histogram ({start_date} to {end_date})')
     plt.xlabel('Temperature (°C)')  # TODO
     plt.ylabel('Frequency')  # TODO
     plt.legend()

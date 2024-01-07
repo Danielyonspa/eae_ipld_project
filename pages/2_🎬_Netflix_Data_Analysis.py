@@ -51,13 +51,17 @@ max_year = movies_df ['release_year'].max( )
 
 
 # TODO: Ex 2.3: How many director names are missing values (NaN)?
-num_missing_directors = None
+num_missing_directors = movies_df['director'].isna().sum()
 
 # TODO: Ex 2.4: How many different countries are there in the data?
-n_countries = None
+n_countries =movies_df['country'] = movies_df['country'].fillna('Unknown')  # TODO n_countries has to be a single integer number with the unique number of different countries (you can build this in multiple lines and steps)
+countries = movies_df['country'].apply(lambda x: ', '.join(x) if isinstance(x, list) else x).str.split(', ')
+unique_countries = pd.Series([item for sublist in countries for item in sublist]).unique()
+n_countries = len(unique_countries)
 
 # TODO: Ex 2.5: How many characters long are on average the title names?
-avg_title_length = None
+movies_df['TitleLength'] = movies_df['title'].apply(lambda x: len(x))
+avg_title_length = movies_df['TitleLength'].mean()  # TODO
 
 
 # ----- Displaying the extracted information metrics -----
